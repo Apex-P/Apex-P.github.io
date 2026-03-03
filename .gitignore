@@ -1,0 +1,17 @@
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+pubspec.lock
+
+# VS Code
+.vscode/
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+
+# macOS
+.DS_Store
