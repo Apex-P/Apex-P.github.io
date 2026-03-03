@@ -1,0 +1,26 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    - prefer_single_quotes
+    - lines_longer_than_80_chars
+    - prefer_relative_imports
+    - directives_ordering
+    - prefer_const_constructors
+    - always_declare_return_types
+
+analyzer:
+  plugins:
+    - custom_lint
+  errors:
+    invalid_annotation_target: ignore
+  exclude:
+    - build/**
+    - .dart_tool/**
+    # I wish we didn't have to exclude these because they are sometimes where
+    # build errors show up (if, say, you write an erroneous Freezed class).
+    # Unfortunately, the analyzer throws an absurd amount of false positives
+    # in these, which require you to manually navigate to them only for the
+    # analyzer to realize "oh never mind". POS >:(
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
